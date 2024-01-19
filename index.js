@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Sample marker data with coordinates and external URLs
     var markerData = [
-      { lat: 40.7128, lng: -74.0060, url: 'https://www.epa.gov/sustainability/learn-about-sustainability' },
-    
+      { lat: 40.7128, lng: -74.0060, url: 'https://www.usatoday.com/story/tech/2021/07/25/technology-changing-how-kids-learn-teachers-teach-education-system/7936443002/' },
+      { lat: 35.00, lng: 103.00, url: 'https://www.cbbc.org/services/our-sector-expertise/tech-innovation' },
       // Add more markers as needed
     ];
   
