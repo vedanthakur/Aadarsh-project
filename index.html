@@ -1,75 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Impact Hub</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
+    />
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  </head>
 
-</head>
+  <body>
+    <nav class="nav" id="home">
+      <ul class="menu" id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#worldwide-analysis">Worldwide Analysis</a></li>
+        <li><a href="#interactive-map">Interactive Map</a></li>
+        <li class="menubutton">
+          <a href="javascript:void(0);" onclick="myFunction()">
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-<body>
-    <div class="navbar">
-        <nav class="shift">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#worldwide-analysis">Worldwide Analysis</a></li>
-                <li><a href="#interactive-map">Interactive Map</a></li>
-                
-            </ul>
-        </nav>
-    </div>
-    
-<section id="home">
-    <div class="home-container">
-       <div class="content" id="content">
-           <div class = "typewriter" style = "width: 67%;">
-               <h1>The Global Impact Hub</h1>
-   
-           </div>
-     
-   </div>
-    </div>
-   </section>
+    <section class="header">
+      <div class="header-container">
+        <div class="content" id="content">
+          <div class="typewriter">
+            <h1>The Global Impact Hub</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="worldwide-analysis">
-        <div class="container">
+      <div class="container">
+        <div class="card">
+          <div class="container-card bg-green-box">
+            <p class="card-title">Zero-cost Possibilities</p>
+            <p class="card-description">
+              Hubble lets users borrow USDH for a one-time 0.5% fee. No variable
+              rates. No interest charged, ever.
+            </p>
+            <img
+              src="hhello.jpg"
+              alt=""
+              width="200"
+              height="200"
+              class="image-card"
+            />
+          </div>
+        </div>
 
+        <div class="card">
+          <div class="container-card bg-green-box">
+            <p class="card-title">Zero-cost Possibilities</p>
+            <p class="card-description">
+              Hubble lets users borrow USDH for a one-time 0.5% fee. No variable
+              rates. No interest charged, ever.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="card">
-                <div class="container-card bg-green-box">
+    <section id="interactive-map">
+      <div class="map-wrapper">
+        <h1>Map</h1>
+        <div id="map"></div>
+      </div>
+    </section>
 
-                    <p class="card-title">Zero-cost Possibilities</p>
-                    <p class="card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No variable
-                        rates. No interest charged, ever.</p>
-                    <img src="hhello.jpg" alt="" width="200" height="200" class="image-card">
-                </div>
-
-                <div class="card">
-                    <div class="container-card bg-green-box">
-
-                        <p class="card-title">Zero-cost Possibilities</p>
-                        <p class="card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No variable
-                            rates. No interest charged, ever.</p>
-                    </div>
- </section>
-
- <section id="interactive-map">
-    <div class="map-wrapper">
-      <center><h1>Map</h1></center>  
-    <div id="map" style="height: 500px;"></div>
-</div>
- </section>
-</body>
-
+    <script>
+      function myFunction() {
+        var x = document.getElementById("menu");
+        if (x.className === "menu") {
+          x.className += " responsive";
+        } else {
+          x.className = "menu";
+        }
+      }
+    </script>
+  </body>
 </html>
